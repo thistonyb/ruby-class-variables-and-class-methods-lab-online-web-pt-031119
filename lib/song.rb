@@ -37,15 +37,16 @@ class Song
         @@genre_count[genre] = 1
       end
     end
+    return @@genre_count
   end
 
   def self.artist_count
     @@artists.each do |artist|
-      # if @@artist_count.has_key?(artist)
-      #   counter = @@artist_count[artist]
-      #   counter += 1
-      #   @@artist_count[artist] = counter
-      if @@artist_count == nil || !@@artist_count.include?(artist)
+      if @@artist_count.has_key?(artist)
+        counter = @@artist_count[artist]
+        counter += 1
+        @@artist_count[artist] = counter
+      elsif @@artist_count == nil || !@@artist_count.include?(artist)
         @@artist_count << artist
       end
     end
