@@ -32,7 +32,8 @@ class Song
         counter = @@genre_count[genre]
         counter += 1
         @@genre_count[genre] = counter
-      elsif condition
+      elsif @@genre_count == nil || !@@genre_count.has_key?(genre)
+        @@genre_count[genre] = 1
       end
     end
   end
