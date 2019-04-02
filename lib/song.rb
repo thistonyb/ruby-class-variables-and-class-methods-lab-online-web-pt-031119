@@ -26,6 +26,7 @@ class Song
         unique_genres << genre
       end
     end
+    return unique_genres
   end
 
   def self.artists
