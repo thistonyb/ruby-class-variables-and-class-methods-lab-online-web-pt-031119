@@ -29,7 +29,13 @@ class Song
   def self.genre_count
     @@genres.each do |genre|
       if @@genre_count.has_key?(genre)
-        @count = @@genre_count[genre]
-        @count += 1
+        counter = @@genre_count[genre]
+        counter += 1
+        @@genre_count[genre] = counter
+      elsif condition
+      end
+    end
+  end
+        
 
 end
