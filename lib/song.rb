@@ -36,7 +36,7 @@ class Song
       elsif @@genre_count == nil || !@@genre_count.has_key?(genre)
         @@genre_count[genre] = 1
       end
-    end  
+    end
   end
 
   def self.genre_count
@@ -48,7 +48,7 @@ class Song
       elsif @@genre_count == nil || !@@genre_count.has_key?(genre)
         @@genre_count[genre] = 1
       end
-    end  
+    end
   end
 
 end
