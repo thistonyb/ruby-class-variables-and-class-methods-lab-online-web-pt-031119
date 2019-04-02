@@ -45,8 +45,8 @@ class Song
       #   counter = @@artist_count[artist]
       #   counter += 1
       #   @@artist_count[artist] = counter
-      if @@artist_count == nil || !@@artist_count.has_key?(artist)
-        @@artist_count[artist] = 1
+      if @@artist_count == nil || !@@artist_count.include?(artist)
+        @@artist_count << artist
       end
     end
   end
