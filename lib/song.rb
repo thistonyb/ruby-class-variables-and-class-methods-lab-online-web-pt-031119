@@ -49,6 +49,7 @@ class Song
         @@artist_count << artist
       end
     end
+    return @@artist_count
   end
 
 end
