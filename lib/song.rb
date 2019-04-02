@@ -47,7 +47,7 @@ class Song
         counter += 1
         @@artist_count[artist] = counter
       elsif @@artist_count == nil || !@@artist_count.include?(artist)
-        @@artist_count << artist
+        @@artist_count[artist] = 1
       end
     end
     return @@artist_count
